@@ -1,0 +1,18 @@
+{
+    "name": "Eaglercraft Paper Server",
+    "image": "mcr.microsoft.com/devcontainers/java:21",
+    "forwardPorts": [25565, 8080],
+    "portsAttributes": {
+        "25565": {
+            "label": "Minecraft / Eaglercraft",
+            "onAutoForward": "notify",
+            "visibility": "public"
+        },
+        "8080": {
+            "label": "Live Web Map",
+            "onAutoForward": "silent",
+            "visibility": "public"
+        }
+    },
+    "postCreateCommand": "bash .devcontainer/setup.sh"
+}
